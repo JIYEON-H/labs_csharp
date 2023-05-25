@@ -46,11 +46,7 @@ namespace Lab
             get { return _isWorking; }
             set { _isWorking = value; }
         }
-
-        public Person()
-        {
-            //this._personId = pid;
-        }
+       
         public Person(int pid, string firstname, string lastname, string fcolor, int age, bool working)
         {
             this._personId = pid;
@@ -97,7 +93,7 @@ namespace Lab
         {
             Sister, Brother, Mother, Father
         }
-        public void ShowRelationShip(Person p1, Person p2)
+        public static void ShowRelationShip(Person p1, Person p2)
         {
             if (p1.FirstName == "Gina" && p2.FirstName == "Mary")
             {
@@ -120,16 +116,15 @@ namespace Lab
             Person p2 = new Person(2, "Gina", "James", "Green", 18, false);
             Person p3 = new Person(3, "Mike", "Briscoe", "Blue", 45, true);
             Person p4 = new Person(4, "Mary", "Beals", "Yellow", 28, true);
-            Person p5 = new Person();
 
             p2.DisplayPersonInfo();
             Console.WriteLine(p3.ToString());
             p1.ChangeFavoriteColour();
 
-            Relation relation1 = new Relation();
-            Relation relation2 = new Relation();
-            relation1.ShowRelationShip(p2, p4);
-            relation2.ShowRelationShip(p1, p3);
+            //Relation relation1 = new Relation();
+            //Relation relation2 = new Relation();
+            Relation.ShowRelationShip(p2, p4);
+            Relation.ShowRelationShip(p1, p3);
 
             p1.DisplayPersonInfo();
             Console.WriteLine(p4.FirstName + " " + p4.LastName + "'s Age in 10 year is: " + p4.GetAgeInTenYears());
