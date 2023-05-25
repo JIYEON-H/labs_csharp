@@ -1,8 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+
+//Prompt the user to enter the low number. - Store the low number as an int variable.
+//Prompt the user to enter the high number. - Store the high number as an int variable.
+//Calculate and print out the difference between the low and high variables.
+//Task 2: Looping and Input Validation
+//Write a loop that keeps iterating until the user enters a positive low number.
+//Write a loop that keeps iterating until the enters a high number greater than the low number.
+//Task 3: Using Arrays and File I/O
+//Create an array variable that holds every number between low and high.
+//Create a new file called "numbers.txt".
+//Write each number in the array to the file in reverse order (largest to smallest).
 
 namespace Lab
 {
@@ -52,7 +65,7 @@ namespace Lab
 
 
             string[] changeToString = Array.ConvertAll(nums, num => num.ToString());
-            
+
             string filepath = @"C:\Users\jiyeo\OneDrive\Desktop\CPRG211_B\Lab\Lab\numbers.txt";
 
             FileStream fs = File.Create(filepath);
