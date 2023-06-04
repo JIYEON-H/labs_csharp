@@ -46,7 +46,7 @@ namespace Lab
             get { return _isWorking; }
             set { _isWorking = value; }
         }
-       
+
         public Person(int pid, string firstname, string lastname, string fcolor, int age, bool working)
         {
             this._personId = pid;
@@ -59,13 +59,12 @@ namespace Lab
 
         public void DisplayPersonInfo()
         {
-            Console.WriteLine(PersonId + ":" + FirstName + LastName + "'s favoite color is " + FavoriteColour);
+            Console.WriteLine(PersonId + ": " + FirstName + " " + LastName + "'s favoite color is " + FavoriteColour);
         }
 
-        public string ChangeFavoriteColour()
+        public void ChangeFavoriteColour()
         {
             FavoriteColour = "White";
-            return FavoriteColour;
         }
         public int GetAgeInTenYears()
         {
@@ -101,7 +100,6 @@ namespace Lab
             }
             else if (p1.FirstName == "Ian" && p2.FirstName == "Mike")
             {
-
                 Console.WriteLine("Relationship between Ian and Mike is: " + RelationType.Brother);
             }
         }
@@ -120,14 +118,14 @@ namespace Lab
             p2.DisplayPersonInfo();
             Console.WriteLine(p3.ToString());
             p1.ChangeFavoriteColour();
+            p1.DisplayPersonInfo();
+
+            Console.WriteLine(p4.FirstName + " " + p4.LastName + "'s Age in 10 year is: " + p4.GetAgeInTenYears());
 
             //Relation relation1 = new Relation();
             //Relation relation2 = new Relation();
             Relation.ShowRelationShip(p2, p4);
             Relation.ShowRelationShip(p1, p3);
-
-            p1.DisplayPersonInfo();
-            Console.WriteLine(p4.FirstName + " " + p4.LastName + "'s Age in 10 year is: " + p4.GetAgeInTenYears());
 
             List<Person> list = new List<Person>();
             list.Add(p1);
